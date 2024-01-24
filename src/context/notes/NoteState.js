@@ -4,7 +4,7 @@ import { useState } from "react";
 const NoteState = (props) => {
   const notesInitial = [
     {
-      _id: "65afb0933c0416a5d1b883ed",
+      _id: "65afb0933c0416gha5d1b883ed",
       user: "65adfc0fa43d48d0b292f72d",
       title: "byebye",
       description: "heybye",
@@ -13,7 +13,7 @@ const NoteState = (props) => {
       __v: 0,
     },
     {
-      _id: "65afb1671402e46449b71df8",
+      _id: "65afb167140gk2e46449b71df8",
       user: "65adfc0fa43d48d0b292f72d",
       title: "tatatata",
       description: "tatatata",
@@ -22,7 +22,7 @@ const NoteState = (props) => {
       __v: 0,
     },
     {
-      _id: "65afb1671402e46449b71df8",
+      _id: "65afb1671402e46449bjk71df8",
       user: "65adfc0fa43d48d0b292f72d",
       title: "tatatata",
       description: "tatatata",
@@ -31,7 +31,7 @@ const NoteState = (props) => {
       __v: 0,
     },
     {
-      _id: "65afb1671402e46449b71df8",
+      _id: "65afb1671402e46jk449b71df8",
       user: "65adfc0fa43d48d0b292f72d",
       title: "tatatata",
       description: "tatatata",
@@ -40,7 +40,7 @@ const NoteState = (props) => {
       __v: 0,
     },
     {
-      _id: "65afb1671402e46449b71df8",
+      _id: "65afb16gh71402e46449b71df8",
       user: "65adfc0fa43d48d0b292f72d",
       title: "tatatata",
       description: "tatatata",
@@ -49,7 +49,7 @@ const NoteState = (props) => {
       __v: 0,
     },
     {
-      _id: "65afb1671402e46449b71df8",
+      _id: "65afb1671402e464kj49b71df8",
       user: "65adfc0fa43d48d0b292f72d",
       title: "tatatata",
       description: "tatatata",
@@ -58,7 +58,7 @@ const NoteState = (props) => {
       __v: 0,
     },
     {
-      _id: "65afb1671402e46449b71df8",
+      _id: "65afb1671402e46449jlb71df8",
       user: "65adfc0fa43d48d0b292f72d",
       title: "tatatata",
       description: "tatatata",

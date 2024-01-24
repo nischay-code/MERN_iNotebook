@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import About from "./components/About";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import NoteState from "../src/context/notes/NoteState";
+import Alert from "./components/Alert";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <NoteState>
         <Router>
           <Navbar />
+          <Alert message={"Success"} />
           <div className="container">
             <Switch>
               <Route exact path="/">
