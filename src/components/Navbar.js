@@ -1,12 +1,13 @@
 import React from "react";
+import { BrowserRouter as Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
-        <a className="navbar-brand" href="/">
-          Navbar
-        </a>
+        <Link className="navbar-brand" to="/">
+          iNotebook
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
@@ -26,7 +27,7 @@ const Navbar = () => {
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/">
+              <a className="nav-link" href="/about">
                 About
               </a>
             </li>
