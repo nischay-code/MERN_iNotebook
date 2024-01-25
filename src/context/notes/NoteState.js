@@ -47,6 +47,7 @@ const NoteState = (props) => {
           "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiNjVhZGZjMGZhNDNkNDhkMGIyOTJmNzJkIiwiaWF0IjoxNzA1OTAzMTg2fQ.-NLbJ__ysY0Hd5NubeSOrjXMU9akZ6wMF9kOX-t_PGY",
       },
     });
+    // eslint-disable-next-line
     const json = response.json();
 
     const newNotes = notes.filter((note) => {
@@ -66,6 +67,7 @@ const NoteState = (props) => {
       },
       body: JSON.stringify({ title, description, tag }),
     });
+    // eslint-disable-next-line
     const json = await response.json();
 
     let newNotes = JSON.parse(JSON.stringify(notes));
