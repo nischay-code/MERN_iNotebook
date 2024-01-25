@@ -37,6 +37,7 @@ const Notes = () => {
     editNote(note.id, note.editTitle, note.editDescription, note.editTag);
     refClose.current.click();
   };
+  
   const onChange = (e) => {
     setNote({ ...note, [e.target.name]: e.target.value });
   };
