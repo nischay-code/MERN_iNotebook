@@ -6,18 +6,20 @@ import AddNote from "./AddNote";
 const Notes = () => {
   const context = useContext(noteContext);
 
-  const { notes, getNotes } = context;
+  const { notes, getNotes, editNote } = context;
   useEffect(() => {
     getNotes();
     // eslint-disable-next-line
   }, []);
 
   const ref = useRef(null);
+  const refClose = useRef(null);
 
   const [note, setNote] = useState({
     editTitle: "",
     editDescription: "",
     editTag: "",
+    id: "",
   });
 
   const updateNote = (currentNote) => {
@@ -26,12 +28,14 @@ const Notes = () => {
       editTitle: currentNote.title,
       editDescription: currentNote.description,
       editTag: currentNote.tag,
+      id: currentNote._id,
     });
   };
 
   const handleClick = (e) => {
     e.preventDefault();
-    console.log("Updating", note);
+    editNote(note.id, note.editTitle, note.editDescription, note.editTag);
+    refClose.current.click();
   };
   const onChange = (e) => {
     setNote({ ...note, [e.target.name]: e.target.value });
@@ -118,6 +122,7 @@ const Notes = () => {
                 type="button"
                 className="btn btn-secondary"
                 data-bs-dismiss="modal"
+                ref={refClose}
               >
                 Close
               </button>
