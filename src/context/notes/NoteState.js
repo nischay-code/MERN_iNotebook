@@ -39,49 +39,22 @@ const NoteState = (props) => {
       date: "2024-01-23T12:30:31.030Z",
       __v: 0,
     },
-    {
-      _id: "65afb16gh71402e46449b71df8",
-      user: "65adfc0fa43d48d0b292f72d",
-      title: "tatatata",
-      description: "tatatata",
-      tag: "tatatata",
-      date: "2024-01-23T12:30:31.030Z",
-      __v: 0,
-    },
-    {
-      _id: "65afb1671402e464kj49b71df8",
-      user: "65adfc0fa43d48d0b292f72d",
-      title: "tatatata",
-      description: "tatatata",
-      tag: "tatatata",
-      date: "2024-01-23T12:30:31.030Z",
-      __v: 0,
-    },
-    {
-      _id: "65afb1671402e46449jlb71df8",
-      user: "65adfc0fa43d48d0b292f72d",
-      title: "tatatata",
-      description: "tatatata",
-      tag: "tatatata",
-      date: "2024-01-23T12:30:31.030Z",
-      __v: 0,
-    },
   ];
 
   const [notes, setNotes] = useState(notesInitial);
 
   // Add
-  const addNote = (title) => {
+  const addNote = (title, description, tag) => {
     const note = {
-      _id: "65afb1671402e46449jlb71df8",
+      _id: "65afb167140asd2e46449jlb71df8",
       user: "65adfc0fa43d48d0b292f72d",
-      title: "tatatata",
-      description: "tatatata",
-      tag: "tatatata",
+      title: title,
+      description: description,
+      tag: tag,
       date: "2024-01-23T12:30:31.030Z",
       __v: 0,
     };
-    setNotes(notes.push(note));
+    setNotes(notes.concat(note));
   };
   // Delete
   const deleteNote = () => {};
