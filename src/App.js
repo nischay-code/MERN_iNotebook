@@ -1,12 +1,12 @@
+import { useState } from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./components/Home";
 import Navbar from "./components/Navbar";
 import About from "./components/About";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import NoteState from "../src/context/notes/NoteState";
 import Alert from "./components/Alert";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
-import { useState } from "react";
 
 function App() {
   const [alert, setAlert] = useState(null);
