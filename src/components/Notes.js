@@ -87,6 +87,8 @@ const Notes = () => {
                     onChange={onChange}
                     name="editTitle"
                     value={note.editTitle}
+                    minLength={5}
+                    required
                   />
                 </div>
                 <div className="mb-3">
@@ -100,6 +102,8 @@ const Notes = () => {
                     onChange={onChange}
                     name="editDescription"
                     value={note.editDescription}
+                    minLength={5}
+                    required
                   />
                 </div>
                 <div className="mb-3">
@@ -130,6 +134,9 @@ const Notes = () => {
                 type="button"
                 className="btn btn-primary"
                 onClick={handleClick}
+                disabled={
+                  note.editTitle.length < 5 || note.editDescription.length < 5
+                }
               >
                 Update Note
               </button>
@@ -139,6 +146,9 @@ const Notes = () => {
       </div>
       <div className="row m-3">
         <h2>Your Notes</h2>
+        <div className="container mx-2">
+          {notes.length === 0 && "No notes to display"}
+        </div>
         {notes &&
           notes.map((note) => {
             return (
