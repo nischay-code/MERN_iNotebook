@@ -1,7 +1,7 @@
 import Home from "./components/Home";
 import Navbar from "./components/Navbar";
 import About from "./components/About";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Router, Switch, Route } from "react-router-dom";
 import NoteState from "../src/context/notes/NoteState";
 import Alert from "./components/Alert";
 import Login from "./components/Login";
