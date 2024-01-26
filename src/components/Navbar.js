@@ -1,14 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useLocation, useHistory } from "react-router-dom";
 
 const Navbar = () => {
-  const location = useLocation();
+  const [userEmail, setUserEmail] = useState("");
 
+  const location = useLocation();
   let history = useHistory();
   const handleLogout = () => {
     localStorage.removeItem("token");
     history.push("/login");
   };
+
+  const getUser = async () => {
+    const host = "http://localhost:5000";
+    const response = await fetch(`${host}/api/auth/getuser`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "auth-token": localStorage.getItem("token"),
+      },
+      body: JSON.stringify({}),
+    });
+    const json = await response.json();
+    setUserEmail(json.email);
+  };
+
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid">
@@ -60,9 +76,14 @@ const Navbar = () => {
               </Link>
             </form>
           ) : (
-            <button onClick={handleLogout} className="btn btn-primary mx-1">
-              Logout
-            </button>
+            getUser() && (
+              <>
+                <p className="text-light my-1 mx-1">User : {userEmail}</p>
+                <button onClick={handleLogout} className="btn btn-danger mx-1">
+                  Logout
+                </button>
+              </>
+            )
           )}
         </div>
       </div>

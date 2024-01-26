@@ -28,7 +28,6 @@ const Signup = (props) => {
       }),
     });
     const json = await response.json();
-    console.log(json);
 
     if (json.success) {
       localStorage.setItem("token", json.authToken);
@@ -45,7 +44,7 @@ const Signup = (props) => {
 
   return (
     <div className="container mt-2">
-    <h2>Create an account to iNotebook</h2>
+      <h2>Create an account to iNotebook</h2>
       <form onSubmit={handleSubmit}>
         <div className="mb-3">
           <label htmlFor="name" className="form-label">
