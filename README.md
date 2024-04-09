@@ -1,6 +1,6 @@
 # iNotebook 📘
 
-iNotebook is a cloud storage notebook application built with the MERN stack (MongoDB, Express.js, React, Node.js). It provides a secure and user-friendly platform for storing and organizing your notes in the cloud.
+iNotebook is a cloud storage notebook application built with the MERN stack (MongoDB Atlas, Express.js, React, Node.js). It provides a secure and user-friendly platform for storing and organizing your notes in the cloud.
 
 ## Features 🚀
 
@@ -18,7 +18,7 @@ iNotebook is a cloud storage notebook application built with the MERN stack (Mon
 - **Backend:**
   - Node.js
   - Express.js
-  - MongoDB with Mongoose
+  - MongoDB Atlas with Mongoose
   
 - **Middleware:**
   - Bcryptjs
